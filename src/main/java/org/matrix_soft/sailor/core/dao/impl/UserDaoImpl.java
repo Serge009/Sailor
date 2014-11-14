@@ -2,6 +2,7 @@ package org.matrix_soft.sailor.core.dao.impl;
 
 import org.matrix_soft.sailor.core.dao.UserDao;
 import org.matrix_soft.sailor.core.entity.User;
+import org.matrix_soft.sailor.core.entity.UserType;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,6 +18,16 @@ public class UserDaoImpl implements UserDao {
     @PersistenceContext
     private EntityManager em;
 
+    @Override
+    @Transactional(readOnly = true)
+    public User findByUsername(String username) {
+        return em.createQuery("from User u where u.username = " + username, User.class).getSingleResult();
+    }
+
+    @Override
+    public User findByUsername(String username, UserType userType) {
+        return em.createQuery("from User u where u.username = '" + username + "' AND u.userType = '" + userType.name() + "'", User.class).getSingleResult();
+    }
 
     @Override
     @Transactional
