@@ -3,6 +3,8 @@ import org.matrix_soft.sailor.core.entity.User;
 import org.matrix_soft.sailor.core.entity.UserType;
 import org.matrix_soft.sailor.core.service.CompanyService;
 import org.matrix_soft.sailor.core.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -10,6 +12,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * Created by SERGE on 13.11.2014.
  */
 public class Main {
+
+    private final static Logger logger = LoggerFactory.getLogger(Main.class);
+
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("META-INF/spring/app-context.xml");
         CompanyService companyService = context.getBean("companyServiceImpl", CompanyService.class);
@@ -17,7 +22,7 @@ public class Main {
 
         Company company = companyService.findById(1);
 
-        System.out.println(company);
+        logger.info("{}", company);
 
         User user = new User();
         user.setCompany(company);
@@ -30,6 +35,6 @@ public class Main {
 
         userService.save(user);
 
-        System.out.println(user);
+        logger.info("{}", user);
     }
 }
