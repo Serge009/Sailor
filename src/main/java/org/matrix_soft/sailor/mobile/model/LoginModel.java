@@ -7,10 +7,8 @@ import javax.validation.constraints.NotNull;
  */
 public class LoginModel {
 
-    @NotNull
     private String email;
 
-    @NotNull
     private String password;
 
     private String license;

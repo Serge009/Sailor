@@ -11,11 +11,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
-import javax.validation.Valid;
-import javax.validation.constraints.AssertFalse;
-import java.util.Queue;
-import java.util.Stack;
-import java.util.Vector;
 
 /**
  * Created by Matrix on 14.11.2014.
@@ -29,8 +24,7 @@ public class MobileLoginServiceImpl implements MobileLoginService {
     private UserService userService;
 
     @Override
-    @AssertFalse
-    public boolean login(@Valid LoginModel loginModel) {
+    public boolean login(LoginModel loginModel) {
         logger.info("login model = {}", loginModel);
 
         User user = userService.findByUsername(loginModel.getEmail(), UserType.MOBILE_USER);
