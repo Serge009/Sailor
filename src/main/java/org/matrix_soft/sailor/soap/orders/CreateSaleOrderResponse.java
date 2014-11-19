@@ -1,5 +1,5 @@
 
-package net.webservicex;
+package org.matrix_soft.sailor.soap.orders;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="GetGeoIPContextResult" type="{http://www.webservicex.net/}GeoIP" minOccurs="0"/>
+ *         &lt;element name="CreateSaleOrderResult" type="{http://tempuri.org/}ServiceResult" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,36 +29,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "getGeoIPContextResult"
+    "createSaleOrderResult"
 })
-@XmlRootElement(name = "GetGeoIPContextResponse")
-public class GetGeoIPContextResponse {
+@XmlRootElement(name = "CreateSaleOrderResponse")
+public class CreateSaleOrderResponse {
 
-    @XmlElement(name = "GetGeoIPContextResult")
-    protected GeoIP getGeoIPContextResult;
+    @XmlElement(name = "CreateSaleOrderResult")
+    protected ServiceResult createSaleOrderResult;
 
     /**
-     * Gets the value of the getGeoIPContextResult property.
+     * Gets the value of the createSaleOrderResult property.
      * 
      * @return
      *     possible object is
-     *     {@link GeoIP }
+     *     {@link ServiceResult }
      *     
      */
-    public GeoIP getGetGeoIPContextResult() {
-        return getGeoIPContextResult;
+    public ServiceResult getCreateSaleOrderResult() {
+        return createSaleOrderResult;
     }
 
     /**
-     * Sets the value of the getGeoIPContextResult property.
+     * Sets the value of the createSaleOrderResult property.
      * 
      * @param value
      *     allowed object is
-     *     {@link GeoIP }
+     *     {@link ServiceResult }
      *     
      */
-    public void setGetGeoIPContextResult(GeoIP value) {
-        this.getGeoIPContextResult = value;
+    public void setCreateSaleOrderResult(ServiceResult value) {
+        this.createSaleOrderResult = value;
     }
 
 }

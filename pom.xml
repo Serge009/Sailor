@@ -194,6 +194,14 @@
             <version>5.1.33</version>
         </dependency>
 
+        <!--MSSQL-->
+        <dependency>
+            <groupId>org.jumpmind.symmetric</groupId>
+            <artifactId>symmetric-mssql</artifactId>
+            <version>3.5.19</version>
+        </dependency>
+
+
     </dependencies>
     <build>
         <finalName>sailor</finalName>

@@ -1,5 +1,5 @@
 
-package net.webservicex;
+package org.matrix_soft.sailor.soap.customers;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="GetGeoIPResult" type="{http://www.webservicex.net/}GeoIP" minOccurs="0"/>
+ *         &lt;element name="GetCustomerListResult" type="{http://tempuri.org/}CustomerServiceResult" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,36 +29,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "getGeoIPResult"
+    "getCustomerListResult"
 })
-@XmlRootElement(name = "GetGeoIPResponse")
-public class GetGeoIPResponse {
+@XmlRootElement(name = "GetCustomerListResponse")
+public class GetCustomerListResponse {
 
-    @XmlElement(name = "GetGeoIPResult")
-    protected GeoIP getGeoIPResult;
+    @XmlElement(name = "GetCustomerListResult")
+    protected CustomerServiceResult getCustomerListResult;
 
     /**
-     * Gets the value of the getGeoIPResult property.
+     * Gets the value of the getCustomerListResult property.
      * 
      * @return
      *     possible object is
-     *     {@link GeoIP }
+     *     {@link CustomerServiceResult }
      *     
      */
-    public GeoIP getGetGeoIPResult() {
-        return getGeoIPResult;
+    public CustomerServiceResult getGetCustomerListResult() {
+        return getCustomerListResult;
     }
 
     /**
-     * Sets the value of the getGeoIPResult property.
+     * Sets the value of the getCustomerListResult property.
      * 
      * @param value
      *     allowed object is
-     *     {@link GeoIP }
+     *     {@link CustomerServiceResult }
      *     
      */
-    public void setGetGeoIPResult(GeoIP value) {
-        this.getGeoIPResult = value;
+    public void setGetCustomerListResult(CustomerServiceResult value) {
+        this.getCustomerListResult = value;
     }
 
 }

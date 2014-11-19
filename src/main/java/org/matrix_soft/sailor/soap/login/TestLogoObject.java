@@ -1,5 +1,5 @@
 
-package org.tempuri;
+package org.matrix_soft.sailor.soap.login;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

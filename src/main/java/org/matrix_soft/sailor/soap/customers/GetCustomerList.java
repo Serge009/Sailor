@@ -1,9 +1,8 @@
 
-package net.webservicex;
+package org.matrix_soft.sailor.soap.customers;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -18,7 +17,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="IPAddress" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="sessionId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="version" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,36 +29,53 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "ipAddress"
+    "sessionId",
+    "version"
 })
-@XmlRootElement(name = "GetGeoIP")
-public class GetGeoIP {
+@XmlRootElement(name = "GetCustomerList")
+public class GetCustomerList {
 
-    @XmlElement(name = "IPAddress")
-    protected String ipAddress;
+    protected String sessionId;
+    protected long version;
 
     /**
-     * Gets the value of the ipAddress property.
+     * Gets the value of the sessionId property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getIPAddress() {
-        return ipAddress;
+    public String getSessionId() {
+        return sessionId;
     }
 
     /**
-     * Sets the value of the ipAddress property.
+     * Sets the value of the sessionId property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setIPAddress(String value) {
-        this.ipAddress = value;
+    public void setSessionId(String value) {
+        this.sessionId = value;
+    }
+
+    /**
+     * Gets the value of the version property.
+     * 
+     */
+    public long getVersion() {
+        return version;
+    }
+
+    /**
+     * Sets the value of the version property.
+     * 
+     */
+    public void setVersion(long value) {
+        this.version = value;
     }
 
 }
