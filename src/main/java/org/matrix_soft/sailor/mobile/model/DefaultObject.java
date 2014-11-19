@@ -1,7 +1,7 @@
 package org.matrix_soft.sailor.mobile.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.sezyakot.android.sailorapp.sailor.interfaces.Itemer;
+//import com.sezyakot.android.sailorapp.sailor.interfaces.Itemer;
 
 
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by Android on 11.09.2014.
  */
-public class DefaultObject extends DefaultData implements Itemer {
+public class DefaultObject extends DefaultData/* implements Itemer*/ {
 
 	@Expose @SerializedName("customer")         protected int                     mCustomerId;
 	@Expose @SerializedName("slip_number")      protected String                  mSlipNumber;
@@ -143,17 +143,17 @@ public class DefaultObject extends DefaultData implements Itemer {
 		mTotalPrice = totalPrice;
 	}
 
-	@Override
+//	@Override
 	public List<Item> getItems() {
 		return null;
 	}
 
-	@Override
+//	@Override
 	public void setItems(List<Item> items) {
 
 	}
 
-	@Override
+//	@Override
 	public double getAdvancePayment() {
 		return 0;
 	}

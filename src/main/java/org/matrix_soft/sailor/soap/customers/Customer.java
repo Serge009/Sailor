@@ -100,7 +100,7 @@ public class Customer {
     protected String districtCode2;
     @XmlElement(name = "ModifiedDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar modifiedDate;
+    protected long modifiedDate;
 
     /**
      * Gets the value of the logicalRef property.
@@ -486,7 +486,7 @@ public class Customer {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar getModifiedDate() {
+    public long getModifiedDate() {
         return modifiedDate;
     }
 
@@ -498,7 +498,7 @@ public class Customer {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setModifiedDate(XMLGregorianCalendar value) {
+    public void setModifiedDate(long value) {
         this.modifiedDate = value;
     }
 

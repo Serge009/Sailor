@@ -1,6 +1,6 @@
 package org.matrix_soft.sailor.mobile.model;
 
-import android.content.Context;
+//import android.content.Context;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -12,9 +12,9 @@ public class RequestDispatch extends Session {
 
 	public RequestDispatch() {}
 
-	public RequestDispatch(Context appContext) {
+	/*public RequestDispatch(Context appContext) {
 		this.setSession(appContext);
-	}
+	}*/
 
 	public ArrayList<Dispatch> getDispatches() {
 		return mDispatches;

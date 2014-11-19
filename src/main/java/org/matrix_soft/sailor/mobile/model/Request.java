@@ -1,6 +1,6 @@
 package org.matrix_soft.sailor.mobile.model;
 
-import android.content.Context;
+//import android.content.Context;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -10,10 +10,10 @@ public class Request extends Session {
 
     public Request() {};
 
-    public Request(Context c){
+    /*public Request(Context c){
         super(c);
         mVersions   = new Versions(c);
-    }
+    }*/
 
     public Versions getVersions() {
         return mVersions;

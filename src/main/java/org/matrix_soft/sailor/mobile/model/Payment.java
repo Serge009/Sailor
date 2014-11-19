@@ -1,15 +1,15 @@
 package org.matrix_soft.sailor.mobile.model;
 
-import android.content.Context;
+/*import android.content.Context;
 import android.os.Parcel;
-import android.os.Parcelable;
+import android.os.Parcelable;*/
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.sezyakot.android.sailorapp.sailor.db.DAO;
+//import com.sezyakot.android.sailorapp.sailor.db.DAO;
 
 import java.sql.SQLException;
 
-public class Payment extends DefaultData implements Parcelable {
+public class Payment extends DefaultData/* implements Parcelable*/ {
 
     public static final String PAYMENT = "payment";
 
@@ -84,7 +84,7 @@ public class Payment extends DefaultData implements Parcelable {
         return mCurrencyName;
     }
 
-    public String getCurrencyName(Context pContext) {
+   /* public String getCurrencyName(Context pContext) {
         DAO lDAO = new DAO(pContext);
         String curName = null;
         try {
@@ -95,18 +95,18 @@ public class Payment extends DefaultData implements Parcelable {
             return null;
         }
         return curName;
-    }
+    }*/
 
     public void setCurrencyName(String pCurrencyName) {
         mCurrencyName = pCurrencyName;
     }
 
-    @Override
+//    @Override
     public int describeContents() {
         return 0;
     }
 
-    @Override
+    /*@Override
     public void writeToParcel(Parcel out, int flags) {
         out.writeIntArray(new int[] {
                 mId,
@@ -165,5 +165,5 @@ public class Payment extends DefaultData implements Parcelable {
             mCurrencyName   = dataStr[5];
         }
 
-    }
+    }*/
 }

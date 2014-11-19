@@ -1,10 +1,10 @@
 package org.matrix_soft.sailor.mobile.model;
 
-import android.content.Context;
+//import android.content.Context;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.sezyakot.android.sailorapp.sailor.db.DAO;
-import com.sezyakot.android.sailorapp.sailor.db.DBHelper;
+//import com.sezyakot.android.sailorapp.sailor.db.DAO;
+//import com.sezyakot.android.sailorapp.sailor.db.DBHelper;
 
 import java.sql.SQLException;
 
@@ -35,7 +35,7 @@ public class Versions {
     
     public Versions() {}
 
-    public Versions(Context c) {
+    /*public Versions(Context c) {
         mServices           = 0;
         mProducts           = 0;
         mCustomers          = 0;
@@ -58,9 +58,9 @@ public class Versions {
         mCreditCardPayment  = 0;
         mBondPayment        = 0;
         mChequePayment      = 0;
-    }
+    }*/
 
-    public void setVersion(Context appContext) {
+    /*public void setVersion(Context appContext) {
         DAO dao = new DAO(appContext);
         try {
             dao.openToRead();
@@ -70,7 +70,7 @@ public class Versions {
         } finally {
             dao.close();
         }
-    }
+    }*/
 
     public int getServices() {
         return mServices;

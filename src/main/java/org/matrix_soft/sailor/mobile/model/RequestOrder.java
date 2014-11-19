@@ -1,6 +1,6 @@
 package org.matrix_soft.sailor.mobile.model;
 
-import android.content.Context;
+//import android.content.Context;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -12,9 +12,9 @@ public class RequestOrder extends Session {
 
     public RequestOrder() {}
 
-    public RequestOrder(Context appContext) {
+    /*public RequestOrder(Context appContext) {
         this.setSession(appContext);
-    }
+    }*/
 
     public ArrayList<Order> getOrders() {
         return mOrders;

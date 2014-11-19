@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class GetCustomersServiceTest {
     public static void main(String[] args) {
-        String sessionId = "a020c20f-e91a-4075-a6f8-9c431d6b69df";
+        String sessionId = "992e2581-c9f6-4350-ad1e-f97104dfa3a9";
 
         CustomerService customerService = new CustomerService();
         CustomerServiceSoap customerServiceSoap = customerService.getCustomerServiceSoap();

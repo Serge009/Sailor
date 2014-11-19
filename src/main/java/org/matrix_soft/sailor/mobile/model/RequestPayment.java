@@ -1,6 +1,6 @@
 package org.matrix_soft.sailor.mobile.model;
 
-import android.content.Context;
+//import android.content.Context;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -13,9 +13,9 @@ public class RequestPayment extends Session {
 
     RequestPayment(){};
 
-    public RequestPayment(Context appContext) {
+    /*public RequestPayment(Context appContext) {
         this.setSession(appContext);
-    }
+    }*/
 
     public List<? extends Payment> getPayments() {
         return mPayments;

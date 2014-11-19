@@ -1,14 +1,14 @@
 package org.matrix_soft.sailor.mobile.model;
 
-import android.content.Context;
+//import android.content.Context;
 
 public class MainCustomer {
 
 	private Customer mCustomer;
 	private static MainCustomer sMainCustomer;
-	private Context mContext;
+//	private Context mContext;
 
-	private MainCustomer(Context appContext) {
+	/*private MainCustomer(Context appContext) {
 		mContext = appContext;
 	};
 
@@ -17,7 +17,7 @@ public class MainCustomer {
 			sMainCustomer = new MainCustomer(c.getApplicationContext());
 		}
 		return sMainCustomer;
-	}
+	}*/
 
 	public Customer getCustomer() {
 		return mCustomer;

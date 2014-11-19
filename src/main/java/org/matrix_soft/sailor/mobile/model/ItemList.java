@@ -1,6 +1,6 @@
 package org.matrix_soft.sailor.mobile.model;
 
-import android.content.Context;
+//import android.content.Context;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -10,14 +10,14 @@ public class ItemList {
 	// Static member holds only one instance of the ItemList class
 	private static ItemList sItemList;
 	private ArrayList<Item> mItems;
-	private Context mAppContext;
+//	private Context mAppContext;
 	// ItemList prevents any other class from instantiating
-	private ItemList (Context appContext) {
+	/*private ItemList (Context appContext) {
 		mAppContext = appContext;
 		mItems = new ArrayList<Item>();
-	}
+	}*/
 
-	public static ItemList get(Context c) {
+	public static ItemList get(/*Context c*/) {
 		/**
 		 * In the above code snippet imagine that multiple threads comes concurrently
 		 * and tries to create the new instance. In such situation the may be three
@@ -38,7 +38,7 @@ public class ItemList {
 		if (sItemList == null) {
 			synchronized (ItemList.class) {
 				if (sItemList == null) {
-					sItemList = new ItemList(c.getApplicationContext());
+//					sItemList = new ItemList(c.getApplicationContext());
 				}
 			}
 		}
