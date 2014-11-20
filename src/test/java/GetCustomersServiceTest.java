@@ -1,4 +1,3 @@
-import com.sun.org.apache.xerces.internal.jaxp.datatype.XMLGregorianCalendarImpl;
 import org.matrix_soft.sailor.soap.customers.Customer;
 import org.matrix_soft.sailor.soap.customers.CustomerService;
 import org.matrix_soft.sailor.soap.customers.CustomerServiceResult;
@@ -17,6 +16,8 @@ public class GetCustomersServiceTest {
         CustomerServiceSoap customerServiceSoap = customerService.getCustomerServiceSoap();
 
         CustomerServiceResult customerList = customerServiceSoap.getCustomerList(sessionId, 0);
+
+        System.out.println(customerList.getDescription());
         List<Customer> customers = customerList.getCustomerList().getCustomer();
         for (Customer customer : customers) {
             System.out.println(customer);

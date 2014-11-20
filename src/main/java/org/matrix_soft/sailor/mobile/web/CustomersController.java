@@ -1,20 +1,25 @@
 package org.matrix_soft.sailor.mobile.web;
 
-import org.matrix_soft.sailor.soap.customers.Customer;
-import org.springframework.stereotype.Controller;
+import org.matrix_soft.sailor.core.entity.Customer;
+import org.matrix_soft.sailor.mobile.service.CustomerService;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.jws.WebMethod;
-import javax.jws.WebParam;
+import javax.inject.Inject;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Matrix on 19.11.2014.
  */
-@Controller("/mobile/customers")
+@RestController
 public class CustomersController {
 
-    @WebMethod(action = "/")
-    public List<Customer> getCustomersList(@WebParam String sessionId) {
-        return null;
+    @Inject
+    CustomerService service;
+
+    @RequestMapping("/mobile/customers")
+    public List<Customer> getCustomersList() {
+        return service.getCustomers();
     }
 }

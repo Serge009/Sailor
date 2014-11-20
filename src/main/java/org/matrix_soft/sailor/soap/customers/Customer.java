@@ -36,6 +36,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="DistrictCode1" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="DistrictCode2" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="ModifiedDate" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
+ *         &lt;element name="Version" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -62,7 +63,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "eMailAddress",
     "districtCode1",
     "districtCode2",
-    "modifiedDate"
+    "modifiedDate",
+    "version"
 })
 public class Customer {
 
@@ -100,7 +102,9 @@ public class Customer {
     protected String districtCode2;
     @XmlElement(name = "ModifiedDate", required = true)
     @XmlSchemaType(name = "dateTime")
-    protected long modifiedDate;
+    protected XMLGregorianCalendar modifiedDate;
+    @XmlElement(name = "Version")
+    protected long version;
 
     /**
      * Gets the value of the logicalRef property.
@@ -486,7 +490,7 @@ public class Customer {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public long getModifiedDate() {
+    public XMLGregorianCalendar getModifiedDate() {
         return modifiedDate;
     }
 
@@ -498,8 +502,24 @@ public class Customer {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setModifiedDate(long value) {
+    public void setModifiedDate(XMLGregorianCalendar value) {
         this.modifiedDate = value;
+    }
+
+    /**
+     * Gets the value of the version property.
+     * 
+     */
+    public long getVersion() {
+        return version;
+    }
+
+    /**
+     * Sets the value of the version property.
+     * 
+     */
+    public void setVersion(long value) {
+        this.version = value;
     }
 
     @Override
@@ -522,6 +542,7 @@ public class Customer {
                 ", districtCode1='" + districtCode1 + '\'' +
                 ", districtCode2='" + districtCode2 + '\'' +
                 ", modifiedDate=" + modifiedDate +
+                ", version=" + version +
                 '}';
     }
 }
