@@ -15,7 +15,7 @@ public class GetCustomersServiceTest {
         CustomerService customerService = new CustomerService();
         CustomerServiceSoap customerServiceSoap = customerService.getCustomerServiceSoap();
 
-        CustomerServiceResult customerList = customerServiceSoap.getCustomerList(sessionId, 0);
+        CustomerServiceResult customerList = customerServiceSoap.getCustomerList(sessionId, 1387532348);
 
         System.out.println(customerList.getDescription());
         List<Customer> customers = customerList.getCustomerList().getCustomer();

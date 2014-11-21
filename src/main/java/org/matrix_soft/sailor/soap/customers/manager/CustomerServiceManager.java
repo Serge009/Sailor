@@ -24,7 +24,7 @@ public class CustomerServiceManager {
     }
 
     public List<Customer> getCustomersList(String sessionId, long version/*timestamp*/) {
-        CustomerServiceResult customerList = customerServiceSoap.getCustomerList(sessionId, 0);
+        CustomerServiceResult customerList = customerServiceSoap.getCustomerList(sessionId, 1416268800);
         return customerList.getCustomerList().getCustomer();
     }
 }
