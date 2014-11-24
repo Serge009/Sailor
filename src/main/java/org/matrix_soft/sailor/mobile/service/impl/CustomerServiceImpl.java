@@ -3,7 +3,7 @@ package org.matrix_soft.sailor.mobile.service.impl;
 import org.matrix_soft.sailor.core.entity.Customer;
 import org.matrix_soft.sailor.mobile.adapter.CustomerAdapter;
 import org.matrix_soft.sailor.mobile.service.CustomerService;
-import org.matrix_soft.sailor.soap.customers.manager.CustomerServiceManager;
+import org.matrix_soft.sailor.soap.managers.CustomerServiceManager;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;

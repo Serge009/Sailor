@@ -1,4 +1,4 @@
-package org.matrix_soft.sailor.soap.customers.manager;
+package org.matrix_soft.sailor.soap.managers;
 
 import org.matrix_soft.sailor.soap.customers.Customer;
 import org.matrix_soft.sailor.soap.customers.CustomerService;
