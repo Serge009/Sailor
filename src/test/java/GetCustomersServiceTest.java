@@ -19,8 +19,6 @@ public class GetCustomersServiceTest {
 
         System.out.println(customerList.getDescription());
         List<Customer> customers = customerList.getCustomerList().getCustomer();
-        for (Customer customer : customers) {
-            System.out.println(customer);
-        }
+        customers.forEach(System.out::println);
     }
 }
