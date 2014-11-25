@@ -1,5 +1,5 @@
 
-package org.matrix_soft.sailor.soap.firm;
+package org.matrix_soft.sailor.soap.firms;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -18,6 +18,8 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="password" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="adminUserName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="adminUserPassword" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="firmNr" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -30,12 +32,16 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "password",
+    "adminUserName",
+    "adminUserPassword",
     "firmNr"
 })
 @XmlRootElement(name = "GetFirm")
 public class GetFirm {
 
     protected String password;
+    protected String adminUserName;
+    protected String adminUserPassword;
     protected int firmNr;
 
     /**
@@ -60,6 +66,54 @@ public class GetFirm {
      */
     public void setPassword(String value) {
         this.password = value;
+    }
+
+    /**
+     * Gets the value of the adminUserName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getAdminUserName() {
+        return adminUserName;
+    }
+
+    /**
+     * Sets the value of the adminUserName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setAdminUserName(String value) {
+        this.adminUserName = value;
+    }
+
+    /**
+     * Gets the value of the adminUserPassword property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getAdminUserPassword() {
+        return adminUserPassword;
+    }
+
+    /**
+     * Sets the value of the adminUserPassword property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setAdminUserPassword(String value) {
+        this.adminUserPassword = value;
     }
 
     /**

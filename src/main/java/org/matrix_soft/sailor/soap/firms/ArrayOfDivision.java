@@ -1,5 +1,5 @@
 
-package org.matrix_soft.sailor.soap.firm;
+package org.matrix_soft.sailor.soap.firms;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,16 +10,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for ArrayOfDepartment_ complex type.
+ * <p>Java class for ArrayOfDivision_ complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ArrayOfDepartment_">
+ * &lt;complexType name="ArrayOfDivision_">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Department_" type="{http://tempuri.org/}Department_" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Division_" type="{http://tempuri.org/}Division_" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,41 +29,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ArrayOfDepartment_", propOrder = {
-    "department"
+@XmlType(name = "ArrayOfDivision_", propOrder = {
+    "division"
 })
-public class ArrayOfDepartment {
+public class ArrayOfDivision {
 
-    @XmlElement(name = "Department_", nillable = true)
-    protected List<Department> department;
+    @XmlElement(name = "Division_", nillable = true)
+    protected List<Division> division;
 
     /**
-     * Gets the value of the department property.
+     * Gets the value of the division property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the department property.
+     * This is why there is not a <CODE>set</CODE> method for the division property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getDepartment().add(newItem);
+     *    getDivision().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Department }
+     * {@link Division }
      * 
      * 
      */
-    public List<Department> getDepartment() {
-        if (department == null) {
-            department = new ArrayList<Department>();
+    public List<Division> getDivision() {
+        if (division == null) {
+            division = new ArrayList<Division>();
         }
-        return this.department;
+        return this.division;
     }
 
 }

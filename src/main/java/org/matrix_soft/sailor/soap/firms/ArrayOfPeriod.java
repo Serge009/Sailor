@@ -1,5 +1,5 @@
 
-package org.matrix_soft.sailor.soap.firm;
+package org.matrix_soft.sailor.soap.firms;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,16 +10,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for ArrayOfDivision_ complex type.
+ * <p>Java class for ArrayOfPeriod_ complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ArrayOfDivision_">
+ * &lt;complexType name="ArrayOfPeriod_">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Division_" type="{http://tempuri.org/}Division_" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Period_" type="{http://tempuri.org/}Period_" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,41 +29,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ArrayOfDivision_", propOrder = {
-    "division"
+@XmlType(name = "ArrayOfPeriod_", propOrder = {
+    "period"
 })
-public class ArrayOfDivision {
+public class ArrayOfPeriod {
 
-    @XmlElement(name = "Division_", nillable = true)
-    protected List<Division> division;
+    @XmlElement(name = "Period_", nillable = true)
+    protected List<Period> period;
 
     /**
-     * Gets the value of the division property.
+     * Gets the value of the period property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the division property.
+     * This is why there is not a <CODE>set</CODE> method for the period property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getDivision().add(newItem);
+     *    getPeriod().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Division }
+     * {@link Period }
      * 
      * 
      */
-    public List<Division> getDivision() {
-        if (division == null) {
-            division = new ArrayList<Division>();
+    public List<Period> getPeriod() {
+        if (period == null) {
+            period = new ArrayList<Period>();
         }
-        return this.division;
+        return this.period;
     }
 
 }

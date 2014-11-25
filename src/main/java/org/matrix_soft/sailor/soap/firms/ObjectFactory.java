@@ -1,5 +1,5 @@
 
-package org.matrix_soft.sailor.soap.firm;
+package org.matrix_soft.sailor.soap.firms;
 
 import javax.xml.bind.annotation.XmlRegistry;
 

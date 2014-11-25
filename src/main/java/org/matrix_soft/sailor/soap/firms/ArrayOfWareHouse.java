@@ -1,5 +1,5 @@
 
-package org.matrix_soft.sailor.soap.firm;
+package org.matrix_soft.sailor.soap.firms;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,16 +10,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for ArrayOfFirm_ complex type.
+ * <p>Java class for ArrayOfWareHouse_ complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ArrayOfFirm_">
+ * &lt;complexType name="ArrayOfWareHouse_">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Firm_" type="{http://tempuri.org/}Firm_" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="WareHouse_" type="{http://tempuri.org/}WareHouse_" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,41 +29,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ArrayOfFirm_", propOrder = {
-    "firm"
+@XmlType(name = "ArrayOfWareHouse_", propOrder = {
+    "wareHouse"
 })
-public class ArrayOfFirm {
+public class ArrayOfWareHouse {
 
-    @XmlElement(name = "Firm_", nillable = true)
-    protected List<Firm> firm;
+    @XmlElement(name = "WareHouse_", nillable = true)
+    protected List<WareHouse> wareHouse;
 
     /**
-     * Gets the value of the firm property.
+     * Gets the value of the wareHouse property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the firm property.
+     * This is why there is not a <CODE>set</CODE> method for the wareHouse property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getFirm().add(newItem);
+     *    getWareHouse().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Firm }
+     * {@link WareHouse }
      * 
      * 
      */
-    public List<Firm> getFirm() {
-        if (firm == null) {
-            firm = new ArrayList<Firm>();
+    public List<WareHouse> getWareHouse() {
+        if (wareHouse == null) {
+            wareHouse = new ArrayList<WareHouse>();
         }
-        return this.firm;
+        return this.wareHouse;
     }
 
 }

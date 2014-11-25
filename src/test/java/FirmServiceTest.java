@@ -1,7 +1,7 @@
-import org.matrix_soft.sailor.soap.firm.Firm;
-import org.matrix_soft.sailor.soap.firm.FirmService;
-import org.matrix_soft.sailor.soap.firm.FirmServiceResult;
-import org.matrix_soft.sailor.soap.firm.FirmServiceSoap;
+import org.matrix_soft.sailor.soap.firms.Firm;
+import org.matrix_soft.sailor.soap.firms.FirmService;
+import org.matrix_soft.sailor.soap.firms.FirmServiceResult;
+import org.matrix_soft.sailor.soap.firms.FirmServiceSoap;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ public class FirmServiceTest {
         FirmService firmService = new FirmService();
         FirmServiceSoap firmServiceSoap = firmService.getFirmServiceSoap();
 
-        FirmServiceResult firmList = firmServiceSoap.getFirmList(password);
+        FirmServiceResult firmList = firmServiceSoap.getFirmList(password, "LOGO", "LOGO");
         List<Firm> firms = firmList.getFirmList().getFirm();
 
         for (Firm firm : firms) {

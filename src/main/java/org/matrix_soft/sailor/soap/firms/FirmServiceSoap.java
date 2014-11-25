@@ -1,5 +1,5 @@
 
-package org.matrix_soft.sailor.soap.firm;
+package org.matrix_soft.sailor.soap.firms;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -26,6 +26,8 @@ public interface FirmServiceSoap {
     /**
      * 
      * @param password
+     * @param adminUserPassword
+     * @param adminUserName
      * @return
      *     returns org.matrix_soft.sailor.soap.firm.FirmServiceResult
      */
@@ -35,11 +37,17 @@ public interface FirmServiceSoap {
     @ResponseWrapper(localName = "GetFirmListResponse", targetNamespace = "http://tempuri.org/", className = "org.matrix_soft.sailor.soap.firm.GetFirmListResponse")
     public FirmServiceResult getFirmList(
         @WebParam(name = "password", targetNamespace = "http://tempuri.org/")
-        String password);
+        String password,
+        @WebParam(name = "adminUserName", targetNamespace = "http://tempuri.org/")
+        String adminUserName,
+        @WebParam(name = "adminUserPassword", targetNamespace = "http://tempuri.org/")
+        String adminUserPassword);
 
     /**
      * 
      * @param password
+     * @param adminUserPassword
+     * @param adminUserName
      * @param firmNr
      * @return
      *     returns org.matrix_soft.sailor.soap.firm.FirmServiceResult
@@ -51,6 +59,10 @@ public interface FirmServiceSoap {
     public FirmServiceResult getFirm(
         @WebParam(name = "password", targetNamespace = "http://tempuri.org/")
         String password,
+        @WebParam(name = "adminUserName", targetNamespace = "http://tempuri.org/")
+        String adminUserName,
+        @WebParam(name = "adminUserPassword", targetNamespace = "http://tempuri.org/")
+        String adminUserPassword,
         @WebParam(name = "firmNr", targetNamespace = "http://tempuri.org/")
         int firmNr);
 

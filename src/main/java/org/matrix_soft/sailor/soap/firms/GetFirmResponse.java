@@ -1,5 +1,5 @@
 
-package org.matrix_soft.sailor.soap.firm;
+package org.matrix_soft.sailor.soap.firms;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="GetFirmListResult" type="{http://tempuri.org/}FirmServiceResult" minOccurs="0"/>
+ *         &lt;element name="GetFirmResult" type="{http://tempuri.org/}FirmServiceResult" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,36 +29,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "getFirmListResult"
+    "getFirmResult"
 })
-@XmlRootElement(name = "GetFirmListResponse")
-public class GetFirmListResponse {
+@XmlRootElement(name = "GetFirmResponse")
+public class GetFirmResponse {
 
-    @XmlElement(name = "GetFirmListResult")
-    protected FirmServiceResult getFirmListResult;
+    @XmlElement(name = "GetFirmResult")
+    protected FirmServiceResult getFirmResult;
 
     /**
-     * Gets the value of the getFirmListResult property.
+     * Gets the value of the getFirmResult property.
      * 
      * @return
      *     possible object is
      *     {@link FirmServiceResult }
      *     
      */
-    public FirmServiceResult getGetFirmListResult() {
-        return getFirmListResult;
+    public FirmServiceResult getGetFirmResult() {
+        return getFirmResult;
     }
 
     /**
-     * Sets the value of the getFirmListResult property.
+     * Sets the value of the getFirmResult property.
      * 
      * @param value
      *     allowed object is
      *     {@link FirmServiceResult }
      *     
      */
-    public void setGetFirmListResult(FirmServiceResult value) {
-        this.getFirmListResult = value;
+    public void setGetFirmResult(FirmServiceResult value) {
+        this.getFirmResult = value;
     }
 
 }

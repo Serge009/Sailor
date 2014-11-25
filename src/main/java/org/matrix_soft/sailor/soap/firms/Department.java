@@ -1,5 +1,5 @@
 
-package org.matrix_soft.sailor.soap.firm;
+package org.matrix_soft.sailor.soap.firms;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -8,12 +8,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for Division_ complex type.
+ * <p>Java class for Department_ complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="Division_">
+ * &lt;complexType name="Department_">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -30,13 +30,13 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Division_", propOrder = {
+@XmlType(name = "Department_", propOrder = {
     "logicalRef",
     "firmNr",
     "nr",
     "name"
 })
-public class Division {
+public class Department {
 
     @XmlElement(name = "LogicalRef")
     protected int logicalRef;

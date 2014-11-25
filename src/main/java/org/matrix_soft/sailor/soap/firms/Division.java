@@ -1,5 +1,5 @@
 
-package org.matrix_soft.sailor.soap.firm;
+package org.matrix_soft.sailor.soap.firms;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -8,21 +8,19 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for Period_ complex type.
+ * <p>Java class for Division_ complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="Period_">
+ * &lt;complexType name="Division_">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="LogicalRef" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="FirmNr" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="Nr" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="Active" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *         &lt;element name="BegDate" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="EndDate" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="Name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -32,15 +30,13 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Period_", propOrder = {
+@XmlType(name = "Division_", propOrder = {
     "logicalRef",
     "firmNr",
     "nr",
-    "active",
-    "begDate",
-    "endDate"
+    "name"
 })
-public class Period {
+public class Division {
 
     @XmlElement(name = "LogicalRef")
     protected int logicalRef;
@@ -48,12 +44,8 @@ public class Period {
     protected int firmNr;
     @XmlElement(name = "Nr")
     protected int nr;
-    @XmlElement(name = "Active")
-    protected boolean active;
-    @XmlElement(name = "BegDate")
-    protected long begDate;
-    @XmlElement(name = "EndDate")
-    protected long endDate;
+    @XmlElement(name = "Name")
+    protected String name;
 
     /**
      * Gets the value of the logicalRef property.
@@ -104,51 +96,27 @@ public class Period {
     }
 
     /**
-     * Gets the value of the active property.
+     * Gets the value of the name property.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public boolean isActive() {
-        return active;
+    public String getName() {
+        return name;
     }
 
     /**
-     * Sets the value of the active property.
+     * Sets the value of the name property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setActive(boolean value) {
-        this.active = value;
-    }
-
-    /**
-     * Gets the value of the begDate property.
-     * 
-     */
-    public long getBegDate() {
-        return begDate;
-    }
-
-    /**
-     * Sets the value of the begDate property.
-     * 
-     */
-    public void setBegDate(long value) {
-        this.begDate = value;
-    }
-
-    /**
-     * Gets the value of the endDate property.
-     * 
-     */
-    public long getEndDate() {
-        return endDate;
-    }
-
-    /**
-     * Sets the value of the endDate property.
-     * 
-     */
-    public void setEndDate(long value) {
-        this.endDate = value;
+    public void setName(String value) {
+        this.name = value;
     }
 
 }
