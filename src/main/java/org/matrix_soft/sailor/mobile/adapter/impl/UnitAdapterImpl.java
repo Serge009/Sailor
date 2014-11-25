@@ -41,6 +41,7 @@ public class UnitAdapterImpl implements UnitAdapter {
         unitDetail.setName(setLine.getName());
         unitDetail.setFrom(setLine.getConvFact1());
         unitDetail.setTo(setLine.getConvFact2());
+        //TODO: set main property
 
         return unitDetail;
     }

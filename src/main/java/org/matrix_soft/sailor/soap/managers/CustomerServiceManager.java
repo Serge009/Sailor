@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 public class CustomerServiceManager {
 
-    CustomerServiceSoap customerServiceSoap;
+    private CustomerServiceSoap customerServiceSoap;
 
     @PostConstruct
     private void init() {
