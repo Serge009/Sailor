@@ -19,10 +19,10 @@ public class CustomerServiceImpl implements CustomerService {
     private String sessionId = "992e2581-c9f6-4350-ad1e-f97104dfa3a9";
 
     @Inject
-    CustomerServiceManager manager;
+    private CustomerServiceManager manager;
 
     @Inject
-    CustomerAdapter adapter;
+    private CustomerAdapter adapter;
 
     @Override
     public List<Customer> getCustomers() {
