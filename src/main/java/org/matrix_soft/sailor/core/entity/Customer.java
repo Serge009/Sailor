@@ -1,5 +1,6 @@
 package org.matrix_soft.sailor.core.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
@@ -10,6 +11,8 @@ import java.io.Serializable;
  */
 @JsonSerialize
 public class Customer {
+
+    private static int counter = 1;
 
     @JsonSerialize
     @JsonProperty("id")
@@ -35,8 +38,13 @@ public class Customer {
     @JsonProperty("status")
     private int status = 1;
 
+    @JsonIgnore
     private int company;
 
+    public Customer() {
+        this.id = counter;
+        counter++;
+    }
 
     public int getId() {
         return id;
